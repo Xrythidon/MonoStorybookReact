@@ -1,0 +1,52 @@
+{
+  "name": "@thefakeorg/react",
+  "version": "0.0.2",
+  "description": "Official React library for @thefakeorg",
+  "author": "Jared Palmer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mono/mono.git",
+    "directory": "packages/react"
+  },
+  "scripts": {
+    "start": "tsdx watch --tsconfig tsconfig.build.json --verbose --noClean",
+    "build": "tsdx build --tsconfig tsconfig.build.json",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepublish": "npm run build",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "main": "dist/index.js",
+  "module": "dist/react.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "README.md",
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "dependencies": {
+    "@thefakeorg/utils": "^0.0.1",
+    "tslib": "^2.0.0",
+    "@babel/core": "^7.15.8",
+    "@size-limit/preset-small-lib": "^6.0.0",
+    "@storybook/addon-essentials": "^6.3.10",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-links": "^6.3.10",
+    "@storybook/addons": "^6.3.10",
+    "@storybook/react": "^6.3.10",
+    "@types/react": "^17.0.27",
+    "@types/react-dom": "^17.0.9",
+    "babel-loader": "^8.2.2",
+    "husky": "^7.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
